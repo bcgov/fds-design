@@ -7,6 +7,10 @@ on:
   release:
     types: [published]
 
+concurrency:
+  group: storybook-deploy
+  cancel-in-progress: true
+
 permissions:
   contents: write
   pages: write
@@ -26,7 +30,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22' # Use Node.js v22
+          node-version: '22'
           cache: 'npm'
 
       # Install dependencies
