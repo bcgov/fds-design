@@ -1,0 +1,5 @@
+{
+  "branch": "gh-pages",
+  "basePath": "/fds-design/",
+  "storybookBuildDir": "storybook-static"
+}
