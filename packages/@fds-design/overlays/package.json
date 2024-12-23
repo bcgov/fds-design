@@ -1,0 +1,62 @@
+{
+  "name": "@fds-design/overlays",
+  "version": "5.7.0",
+  "description": "Spectrum UI components in React",
+  "license": "Apache-2.0",
+  "main": "dist/main.js",
+  "module": "dist/module.js",
+  "exports": {
+    "types": "./dist/types.d.ts",
+    "import": "./dist/import.mjs",
+    "require": "./dist/main.js"
+  },
+  "types": "dist/types.d.ts",
+  "source": "src/index.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "targets": {
+    "targets": {
+  "main": {
+    "includeNodeModules": [
+      "file:../../fds-css"
+    ]
+  },
+  "module": {
+    "includeNodeModules": [
+      "file:../../fds-css"
+    ]
+  }
+}
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcgov/fds-design"
+  },
+  "dependencies": {
+    "@react-aria/interactions": "^3.22.5",
+    "@react-aria/overlays": "^3.24.0",
+    "@react-aria/utils": "^3.26.0",
+    "@react-spectrum/utils": "file:../../utils",
+    "@react-stately/overlays": "^3.6.12",
+    "@react-types/overlays": "^3.8.11",
+    "@react-types/shared": "^3.26.0",
+    "@swc/helpers": "^0.5.0",
+    "react-transition-group": "^4.4.5"
+  },
+  "devDependencies": {
+    "@adobe/spectrum-css-temp": "3.0.0-alpha.1"
+  },
+  "peerDependencies": {
+    "@react-spectrum/provider": "file:../../provider",
+    "react": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1",
+    "react-dom": "^16.8.0 || ^17.0.0-rc.1 || ^18.0.0 || ^19.0.0-rc.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
