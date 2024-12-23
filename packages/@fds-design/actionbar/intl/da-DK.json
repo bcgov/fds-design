@@ -1,7 +1,0 @@
-{
-  "actions": "Handlinger",
-  "actionsAvailable": "Tilgængelige handlinger.",
-  "clearSelection": "Ryd markering",
-  "selected": "{count, plural, =0 {Ingen valgt} other {# valgt}}",
-  "selectedAll": "Alle valgt"
-}
