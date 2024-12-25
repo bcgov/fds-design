@@ -50,8 +50,11 @@ export const globalTypes = {
     description: 'Global theme for components',
     defaultValue: 'light', // Default theme
     toolbar: {
-      icon: 'circlehollow', // Toolbar icon in Storybook
-      items: ['light', 'dark'], // Available options
+      icon: 'circlehollow', // Default icon; will update based on selection
+      items: [
+        { value: 'light', icon: 'sun', title: 'Light Mode' },
+        { value: 'dark', icon: 'moon', title: 'Dark Mode' },
+      ],
       showName: true, // Display the selected option name
     },
   },
