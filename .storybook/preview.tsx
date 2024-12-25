@@ -1,7 +1,6 @@
 import React from 'react';
 import {Provider} from '@react-spectrum/provider';
 import theme from 'fds-theme';
-import {theme as adobeTheme} from '@react-spectrum/theme-default'
 import type {Preview} from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
@@ -30,8 +29,6 @@ const preview: Preview = {
       document.body.classList.remove('spectrum--light', 'spectrum--dark');
       document.body.classList.add(isDarkMode ? 'spectrum--dark' : 'spectrum--light');
 
-      console.log("my: ", theme)
-      console.log("adobe ", adobeTheme)
       // Use React Spectrum's Provider for additional context
       return (
         <Provider theme={theme} colorScheme={isDarkMode ? 'dark' : 'light'}>
