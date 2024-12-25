@@ -1,6 +1,7 @@
 import React from 'react';
 import {Provider} from '@react-spectrum/provider';
 import theme from 'fds-theme';
+import 'fds-theme/dist/style.css';
 import type {Preview} from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
@@ -47,11 +48,8 @@ export const globalTypes = {
     description: 'Global theme for components',
     defaultValue: 'light', // Default theme
     toolbar: {
-      icon: 'circlehollow', // Default icon; will update based on selection
-      items: [
-        { value: 'light', icon: 'sun', title: 'Light Mode' },
-        { value: 'dark', icon: 'moon', title: 'Dark Mode' },
-      ],
+      icon: 'circlehollow', // Toolbar icon in Storybook
+      items: ['light', 'dark'], // Available options
       showName: true, // Display the selected option name
     },
   },
