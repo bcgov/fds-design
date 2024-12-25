@@ -49,8 +49,11 @@ export const globalTypes = {
     defaultValue: 'light', // Default theme
     toolbar: {
       icon: 'circlehollow', // Toolbar icon in Storybook
-      items: ['light', 'dark'], // Available options
-      showName: true, // Display the selected option name
+      items: [
+        { value: 'light', icon: 'sun', title: 'Light Mode' },
+        { value: 'dark', icon: 'moon', title: 'Dark Mode' },
+      ],
+      dynamicTitle: true,
     },
   },
 };
