@@ -17,9 +17,47 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # Build Storybook
-  build:
+  # Build fds-theme
+  build-theme:
     runs-on: ubuntu-latest
+
+    steps:
+      # Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Setup Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      # Install dependencies for fds-theme
+      - name: Install dependencies
+        run: |
+          cd packages/fds-theme
+          npm install
+
+      # Build fds-theme
+      - name: Build fds-theme
+        run: |
+          cd packages/fds-theme
+          npm run build
+
+      # Cache fds-theme build artifacts
+      - name: Cache fds-theme build
+        uses: actions/cache@v3
+        with:
+          path: packages/fds-theme/dist
+          key: ${{ runner.os }}-fds-theme-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-fds-theme-
+
+  # Build Storybook
+  build-storybook:
+    runs-on: ubuntu-latest
+    needs: build-theme
 
     steps:
       # Checkout code
@@ -37,6 +75,15 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      # Restore fds-theme build artifacts
+      - name: Restore fds-theme build
+        uses: actions/cache@v3
+        with:
+          path: packages/fds-theme/dist
+          key: ${{ runner.os }}-fds-theme-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-fds-theme-
+
       # Build Storybook
       - name: Build Storybook
         run: npm run build-storybook
@@ -53,7 +100,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-storybook
 
     steps:
       - name: Deploy to GitHub Pages

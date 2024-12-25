@@ -1,6 +1,6 @@
 import React from 'react';
 import {Provider} from '@react-spectrum/provider';
-import theme from '../packages/fds-theme/dist/index.es.js';
+import theme from 'fds-theme';
 import {theme as adobeTheme} from '@react-spectrum/theme-default'
 import type {Preview} from '@storybook/react';
 import { action } from '@storybook/addon-actions';
