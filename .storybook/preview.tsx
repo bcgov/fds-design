@@ -4,6 +4,7 @@ import theme from 'fds-theme';
 import 'fds-theme/dist/style.css';
 import type {Preview} from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import './styles.scss';
 
 // Define parameters for controls and actions
 const preview: Preview = {

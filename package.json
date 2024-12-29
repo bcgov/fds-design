@@ -1,10 +1,14 @@
 {
   "name": "fds-design",
   "private": false,
-  "version": "1.0.0",
+  "version": "0.0.1",
   "workspaces": [
     "packages/@fds-design/*"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bcgov/fds-design"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -15,10 +19,13 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@carbon/icons-react": "^11.53.0",
     "@react-spectrum/button": "^3.16.9",
     "@react-spectrum/form": "^3.7.10",
     "@react-spectrum/layout": "^3.6.10",
+    "@react-spectrum/link": "^3.6.12",
     "@react-spectrum/provider": "^3.10.0",
+    "@react-spectrum/text": "^3.5.10",
     "@react-spectrum/theme-default": "^3.5.14",
     "@react-spectrum/tooltip": "^3.7.0",
     "@react-spectrum/view": "^3.6.14",

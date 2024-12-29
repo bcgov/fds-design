@@ -1,4 +1,11 @@
 .fds-button{
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
   --spectrum-button-border-radius: 4px;
   height: 48px;
+
+  svg{
+    margin-left: 8px;
+  }
 }
