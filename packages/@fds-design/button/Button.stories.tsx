@@ -1,11 +1,11 @@
-import { Meta } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/react";
 import { Button } from ".";
 import { action } from "@storybook/addon-actions";
 import { SpectrumButtonProps } from "@react-spectrum/button";
 import { Link } from "@react-spectrum/link";
-import { Tree } from "@carbon/icons-react";
+import { Tree, Add, TrashCan } from "@carbon/icons-react";
 
-export default {
+const meta: Meta<SpectrumButtonProps<"button">> = {
     title: "Button",
     component: Button,
     args: {
@@ -92,11 +92,19 @@ export default {
             defaultValue: false,
         },
     },
-} as Meta<SpectrumButtonProps<"button">>;
+};
 
-// Default Primary
-export const Default = {
-    render: () => (
+export default meta;
+
+// Default Story
+export const Default: StoryObj<SpectrumButtonProps<"button">> = {
+    args: {
+        children: "Click Me",
+        variant: "accent",
+        style: "fill",
+        isDisabled: false,
+    },
+    render: (args) => (
         <>
             <Link
                 href="https://react-spectrum.adobe.com/react-spectrum/Button.html"
@@ -104,15 +112,8 @@ export const Default = {
             >
                 See the full documentation at React Spectrum
             </Link>
-
             <div className="story-container">
-                {/* Accent */}
-                <Button
-                    variant="accent"
-                    onPress={() => alert("I'm an FDS button.")}
-                >
-                    Click me!
-                </Button>
+                <Button {...args} />
             </div>
         </>
     ),
@@ -156,6 +157,14 @@ export const Accent = {
             >
                 Disabled
             </Button>
+
+            {/* Icon only */}
+            <Button
+                variant="accent"
+                onPress={() => alert("I'm an FDS button.")}
+            >
+                <Add />
+            </Button>
         </div>
     ),
 };
@@ -169,6 +178,15 @@ export const Secondary = {
                 variant="secondary"
             >
                 Secondary
+            </Button>
+
+            {/* Secondary Icon */}
+            <Button
+                variant="secondary"
+                onPress={() => alert("I'm a secondary button.")}
+            >
+                Secondary Icon
+                <Tree />
             </Button>
 
             {/* Secondary Tertiary */}
@@ -186,6 +204,14 @@ export const Secondary = {
                 isDisabled
             >
                 Disabled
+            </Button>
+
+            {/* Icon only */}
+            <Button
+                variant="secondary"
+                onPress={() => alert("I'm an FDS button.")}
+            >
+                <Add />
             </Button>
         </div>
     ),
@@ -202,7 +228,16 @@ export const Negative = {
                 Negative
             </Button>
 
-            {/* Secondary Tertiary */}
+            {/* Negative Icon */}
+            <Button
+                variant="negative"
+                onPress={() => alert("I'm a negative button.")}
+            >
+                Negative Icon
+                <Tree />
+            </Button>
+
+            {/* Negative Tertiary */}
             <Button
                 onPress={() => alert("I'm a tertiary button.")}
                 variant="negative"
@@ -217,6 +252,14 @@ export const Negative = {
                 isDisabled
             >
                 Disabled
+            </Button>
+
+            {/* Icon only */}
+            <Button
+                variant="negative"
+                onPress={() => alert("I'm an FDS button.")}
+            >
+                <TrashCan />
             </Button>
         </div>
     ),
