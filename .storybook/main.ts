@@ -18,5 +18,8 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: "react-docgen-typescript",
   },
+  features: {
+    backgroundsStoryGlobals: true,
+  },
 };
 export default config;

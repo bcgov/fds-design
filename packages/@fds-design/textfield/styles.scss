@@ -1,0 +1,13 @@
+.fds-textfield {
+    font-family: var(--spectrum-global-font-family-base);
+    width: 288px;
+    input {
+        padding: 16px;
+        height: 48px;
+        font-family: var(--spectrum-global-font-family-base);
+        border-width: 0 0 1px 0;
+        border-style: solid;
+        border-radius: 4px 4px 0 0;
+        background-color: var(--spectrum-gray-100);
+    }
+}

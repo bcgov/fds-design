@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from ".";
 import { action } from "@storybook/addon-actions";
-import { SpectrumButtonProps } from "@react-spectrum/button";
-import { Link } from "@react-spectrum/link";
+import { Link, SpectrumButtonProps } from "@adobe/react-spectrum";
 import { Tree, Add, TrashCan } from "@carbon/icons-react";
 
 const meta: Meta<SpectrumButtonProps<"button">> = {
@@ -17,7 +16,7 @@ const meta: Meta<SpectrumButtonProps<"button">> = {
         onFocus: action("focus"),
         onBlur: action("blur"),
         onKeyUp: action("keyup"),
-        children: "Click Me",
+        children: "Click me!",
         variant: "accent",
         style: "fill",
     },
@@ -30,7 +29,6 @@ const meta: Meta<SpectrumButtonProps<"button">> = {
                 type: {
                     summary: "ReactNode",
                 },
-                defaultValue: { summary: "Click Me" },
             },
         },
         onPress: {
@@ -99,10 +97,11 @@ export default meta;
 // Default Story
 export const Default: StoryObj<SpectrumButtonProps<"button">> = {
     args: {
-        children: "Click Me",
+        children: "Click me!",
         variant: "accent",
         style: "fill",
         isDisabled: false,
+        onPress: () => alert("I'm an FDS button."),
     },
     render: (args) => (
         <>

@@ -1,12 +1,17 @@
-.fds-button{
+.fds-button {
+  font-family: var(--spectrum-global-font-family-base);
   display: inline-flex;
   flex-direction: row;
   justify-content: space-between;
   --spectrum-button-border-radius: 4px;
   height: 48px;
+  min-width: fit-content;
+  white-space: wrap;
 
-  svg{
+  svg {
     margin-left: 8px;
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -16,36 +21,65 @@
   height: 48px;
   --spectrum-button-border-radius: 4px;
   padding: 0;
+
+  svg {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 body.spectrum--light .fds-icon-only-button:not([data-static-color])[data-variant="secondary"][data-style="fill"],
 body.spectrum--light .fds-button:not([data-static-color])[data-variant="secondary"][data-style="fill"] {
-  --spectrum-button-color: var(--spectrum-gray-800);
-  --spectrum-button-color-hover: var(--spectrum-gray-900);
+  --spectrum-button-color: var(--spectrum-gray-700);
+  --spectrum-button-color-hover: var(--spectrum-gray-800);
   --spectrum-button-color-down: var(--spectrum-gray-900);
-  --spectrum-button-color-key-focus: var(--spectrum-gray-900);
+  --spectrum-button-color-key-focus: var(--spectrum-gray-800);
 }
 
 body.spectrum--light .fds-icon-only-button:not([data-static-color])[data-variant="secondary"][data-style="fill"],
 body.spectrum--light .fds-button:not([data-static-color])[data-variant="secondary"][data-style="fill"]  {
-  --spectrum-button-text-color: var(--spectrum-gray-200);
-  --spectrum-button-text-color-hover: var(--spectrum-gray-300);
-  --spectrum-button-text-color-down: var(--spectrum-gray-400);
-  --spectrum-button-text-color-key-focus: var(--spectrum-gray-400);
+  --spectrum-button-text-color: var(--spectrum-gray-50);
+  --spectrum-button-text-color-hover: var(--spectrum-gray-75);
+  --spectrum-button-text-color-down: var(--spectrum-gray-100);
+  --spectrum-button-text-color-key-focus: var(--spectrum-gray-75);
 }
 
-body.spectrum--dark .fds-icon-only-button:not([data-static-color])[data-variant="secondary"][data-style="fill"]
+body.spectrum--dark .fds-icon-only-button:not([data-static-color])[data-variant="secondary"][data-style="fill"],
 body.spectrum--dark .fds-button:not([data-static-color])[data-variant="secondary"][data-style="fill"] {
-  --spectrum-button-color: var(--spectrum-gray-200);
-  --spectrum-button-color-hover: var(--spectrum-gray-300);
-  --spectrum-button-color-down: var(--spectrum-gray-400);
-  --spectrum-button-color-key-focus: var(--spectrum-gray-300);
+  --spectrum-button-color: var(--spectrum-gray-600);
+  --spectrum-button-color-hover: var(--spectrum-gray-400);
+  --spectrum-button-color-down: var(--spectrum-gray-300);
+  --spectrum-button-color-key-focus: var(--spectrum-gray-400);
 }
 
-body.spectrum--dark .fds-icon-only-button:not([data-static-color])[data-variant="secondary"][data-style="fill"]
+body.spectrum--dark .fds-icon-only-button:not([data-static-color])[data-variant="secondary"][data-style="fill"],
 body.spectrum--dark .fds-button:not([data-static-color])[data-variant="secondary"][data-style="fill"]  {
-  --spectrum-button-text-color: var(--spectrum-gray-800);
-  --spectrum-button-text-color-hover: var(--spectrum-gray-900);
-  --spectrum-button-text-color-down: var(--spectrum-gray-900);
-  --spectrum-button-text-color-key-focus: var(--spectrum-gray-900);
+  --spectrum-button-text-color: var(--spectrum-gray-100); // rgb(34, 34, 34);
+  --spectrum-button-text-color-hover: var(--spectrum-gray-50); // rgb(0, 0, 0);
+  --spectrum-button-text-color-down: var(--spectrum-gray-50); // rgb(0, 0, 0);
+  --spectrum-button-text-color-key-focus: var(--spectrum-gray-50); // rgb(0, 0, 0);
+}
+
+/* Bold Buttons */
+.fds-button strong,
+.fds-button b {
+  font-family: var(--spectrum-global-font-family-base-bold);
+  font-weight: 700; /* Explicitly set bold weight */
+}
+
+/* Italic Buttons */
+.fds-button em,
+.fds-button i {
+  font-family: var(--spectrum-global-font-family-base-italic);
+  font-style: italic;
+}
+
+/* Bold Italic Buttons */
+.fds-button strong em,
+.fds-button strong i,
+.fds-button b em,
+.fds-button b i {
+  font-family: var(--spectrum-global-font-family-base-bold-italic);
+  font-weight: 700;
+  font-style: italic;
 }
