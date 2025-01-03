@@ -1,9 +1,7 @@
 ## PoC of the FDS UI Library
 Based on React Spectrum
 
-<a href="https://bcgov.github.io/fds-design" target="_blank">
-  <img src="https://img.shields.io/badge/Storybook-DEADED?logo=storybook&logoColor=white" alt="Storybook"/>
-</a>
+[![Storybook](https://img.shields.io/badge/Storybook-DEADED?logo=storybook&logoColor=white)](https://bcgov.github.io/fds-design)
 
 <img src="https://i.imgflip.com/9flk2y.jpg" title="genius" width="250px"/>
 
