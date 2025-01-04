@@ -2,8 +2,8 @@ import type { StorybookConfig } from "@storybook/react-vite";
 
 const config: StorybookConfig = {
   stories: [
-    "../packages/**/*.stories.@(js|jsx|ts|tsx|mdx)", // Include MDX files explicitly
-    "../packages/**/*.mdx" // Ensure loose .mdx files are covered
+    "../src/components/**/*.stories.@(js|jsx|ts|tsx|mdx)", // Include MDX files explicitly
+    "../src/components/**/*.mdx" // Ensure loose .mdx files are covered
   ],
   addons: [
     "@storybook/addon-essentials",
@@ -20,6 +20,10 @@ const config: StorybookConfig = {
   },
   features: {
     backgroundsStoryGlobals: true,
+  },
+  viteFinal: async (config) => {
+    config.base = '/fds-design/';
+    return config;
   },
 };
 export default config;

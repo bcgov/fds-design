@@ -21,5 +21,5 @@
         "noFallthroughCasesInSwitch": true,
         "noUncheckedSideEffectImports": true
     },
-    "include": ["packages"]
+    "include": ["packages", "src/components/button", "src/components/textfield", "src/dist", "src/theme/index.ts"]
 }

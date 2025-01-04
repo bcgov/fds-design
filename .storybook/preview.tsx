@@ -1,7 +1,7 @@
 import React from "react";
 import { Provider } from "@react-spectrum/provider";
-import theme from "fds-theme";
-import "fds-theme/dist/style.css";
+import theme from "fds-design/theme";
+import "../dist/theme/fds-design.css";
 import type { Preview } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import "./styles.scss";
@@ -26,6 +26,8 @@ const preview: Preview = {
         (Story, context) => {
             // Detect Storybook dark mode from globals
             const isDarkMode = context.globals.theme === "dark";
+
+            console.log(theme);
 
             // Apply global body classes for Spectrum CSS themes
             document.body.classList.remove("spectrum--light", "spectrum--dark");

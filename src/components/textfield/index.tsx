@@ -11,3 +11,5 @@ export const TextField: React.FC<SpectrumTextFieldProps> = (
 ) => (
   <SpectrumTextField {...props} UNSAFE_className="fds-textfield"/>
 )
+
+export default TextField;

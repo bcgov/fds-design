@@ -37,3 +37,5 @@ export const Button: React.FC<SpectrumButtonProps> = (
 
     return <SpectrumButton {...defaultProps} UNSAFE_className={className} />;
 };
+
+export default Button;
