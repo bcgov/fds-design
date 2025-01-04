@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { TextField } from ".";
 import { action } from "@storybook/addon-actions";
-import { SpectrumTextFieldProps, Link } from "@adobe/react-spectrum";
+import { SpectrumTextFieldProps } from "@react-spectrum/textfield";
+import { Link } from "@react-spectrum/link";
 
 const meta: Meta<SpectrumTextFieldProps> = {
   title: "TextField",
