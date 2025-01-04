@@ -86,7 +86,9 @@ jobs:
 
       # Build Storybook
       - name: Build Storybook
-        run: npm run build-storybook
+        run: |
+          npm run build-storybook
+          cp -R packages/fds-theme/dist storybook-static/fds-theme
 
       # Upload artifact for deployment
       - name: Upload artifact
