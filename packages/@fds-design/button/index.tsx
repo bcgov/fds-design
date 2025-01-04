@@ -2,7 +2,7 @@ import React from "react";
 import {
     Button as SpectrumButton,
     SpectrumButtonProps,
-} from "@adobe/react-spectrum";
+} from "@react-spectrum/button";
 import "./styles.scss";
 
 // Check if children is an icon-only button

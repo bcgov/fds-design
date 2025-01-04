@@ -1,5 +1,5 @@
 import React from "react";
-import { Provider } from "@adobe/react-spectrum";
+import { Provider } from "@react-spectrum/provider";
 import theme from "fds-theme";
 import "fds-theme/dist/style.css";
 import type { Preview } from "@storybook/react";

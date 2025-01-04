@@ -10,6 +10,7 @@ const themeHashes = {
   medium: 'rfm_fq',
   large: '_1DrGeG',
 };
+
 // Generate hash based on theme
 const generateScopedName = (name, theme) => {
   const hash = themeHashes[theme] || themeHashes.global; // Default to global

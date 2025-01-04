@@ -19,8 +19,17 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@adobe/react-spectrum": "^3.38.1",
     "@carbon/icons-react": "^11.53.0",
+    "@react-spectrum/button": "^3.16.9",
+    "@react-spectrum/form": "^3.7.10",
+    "@react-spectrum/layout": "^3.6.10",
+    "@react-spectrum/link": "^3.6.12",
+    "@react-spectrum/provider": "^3.10.0",
+    "@react-spectrum/text": "^3.5.10",
+    "@react-spectrum/textfield": "^3.12.7",
+    "@react-spectrum/theme-default": "^3.5.14",
+    "@react-spectrum/tooltip": "^3.7.0",
+    "@react-spectrum/view": "^3.6.14",
     "@spectrum-icons/workflow": "^4.2.16",
     "fds-theme": "file:packages/fds-theme",
     "react": "^19.0.0",

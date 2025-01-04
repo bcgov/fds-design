@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import { Button } from ".";
 import { action } from "@storybook/addon-actions";
-import { Link, SpectrumButtonProps } from "@adobe/react-spectrum";
+import { SpectrumButtonProps } from "@react-spectrum/button";
+import { Link } from "@react-spectrum/link";
 import { Tree, Add, TrashCan } from "@carbon/icons-react";
 
 const meta: Meta<SpectrumButtonProps<"button">> = {
